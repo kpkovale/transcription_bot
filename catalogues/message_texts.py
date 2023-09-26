@@ -4,7 +4,7 @@ class MessageTexts:
     """
     Class to keep your messages template for project
     """
-    MESSAGE_TEMPLATE1 = "Message_TEXT"
-
+    MESSAGE_TEMPLATE1 = "Чё каво, как дела?"
+    BOT_RECOGNITION_MESSAGE = "*@БОТ* (распознанное сообщение):\n{}"
     FLOOD_MESSAGE = "You're sending requests too often"
 

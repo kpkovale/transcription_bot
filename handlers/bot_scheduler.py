@@ -1,13 +1,15 @@
 import aioschedule
 import asyncio
+from utils.token_generator import IAMToken
 
 
 async def scheduler():
-    aioschedule.every().day.at("15:00").do(remind)
+    aioschedule.every().minutes(60).do(refresh_token)
     while True:
         await aioschedule.run_pending()
-        await asyncio.sleep(50)
+        await asyncio.sleep(60)
 
 
-async def remind():
-    print("Hi!")
+async def refresh_token():
+    tokenizer = IAMToken()
+    token = tokenizer.iam_token

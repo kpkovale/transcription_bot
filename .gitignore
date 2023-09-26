@@ -137,3 +137,6 @@ alembic.ini
 
 # log files
 logs/*.log
+
+# keys
+authorized_key.json

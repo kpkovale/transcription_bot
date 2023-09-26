@@ -11,6 +11,7 @@ LOG_LEVEL = logging.INFO
 BASE_DIR = Path(__file__).parent.resolve()
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 TOKEN = os.getenv("TOKEN")
+KEYS_FILE = os.path.join(BASE_DIR, "authorized_key.json")
 
 # load database connection string params from .env
 DB_STRING = 'sqlite:///my_db.db'
